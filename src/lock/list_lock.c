@@ -36,7 +36,6 @@ void consumer(list_lock_t* list) {
   struct node *cur=list->head;
   list->head=cur->next;
   free(cur);
-  // printf("head = %p\n", list->head);
   pthread_mutex_unlock(&list->mutex);
 }
 
